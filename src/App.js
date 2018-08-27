@@ -24,7 +24,7 @@ class App extends Component {
         if (event.currentTarget.id) {
             groupName = event.currentTarget.id
             this.setState({showChecklist: true, currentGroupName: groupName})
-        } else throw new Error('Could not get current target of click. Element id is not defined.')
+        } else console.log(new Error('Could not get current target of click. Element id is not defined.'))
     }
     taskClicked(event) {
         event.stopPropagation()
@@ -40,7 +40,7 @@ class App extends Component {
                 return element.id === targetTaskId
             })
             this.setState({ tasks: tasks })
-        } else throw new Error('Could not get current target of click. Element id is not defined.')
+        } else console.log(new Error('Could not get current target of click. Element id is not defined.'))
     }
     returnToGroups() {
         this.setState({ showChecklist: false, currentGroupName: '' })

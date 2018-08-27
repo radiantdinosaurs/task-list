@@ -15,7 +15,7 @@ class Group extends Component {
                 else collection.push(item)
             })
             return map
-        } else throw new Error('Undefined parameters.')
+        } else console.log(new Error('Undefined parameters.'))
     }
     render() {
         const tasks = this.props.tasks

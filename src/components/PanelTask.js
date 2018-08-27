@@ -18,7 +18,7 @@ class PanelTask extends Component {
                 }
             })
             return completedDependencies === dependencyIds.length
-        } else throw new Error('Undefined parameters.')
+        } else console.log(new Error('Undefined parameters.'))
     }
     render() {
         const { tasks, currentGroupName } = this.props
@@ -59,7 +59,7 @@ class PanelTask extends Component {
                         <strike><strong>{ task.task }</strong></strike>
                     </ListGroupItem>
                 } else {
-                    throw new Error('Object not as expected -- expected completedAt.')
+                    console.log(new Error('Object not as expected -- expected completedAt.'))
                 }
             }))
     }
