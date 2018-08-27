@@ -43,7 +43,7 @@ Endpoint un-checking a task: ```/tasks/uncheck/```
 
 ## Allowed HTTPs Requests for Specified Endpoints
 
-POST
+```POST```
 
 ## Description of Server Responses
 
