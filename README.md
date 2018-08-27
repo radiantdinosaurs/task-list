@@ -1,12 +1,8 @@
 # About
 
-<hr>
-
 This is an app for a basic task list.
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
-
-<hr>
 
 # Getting Started
 
