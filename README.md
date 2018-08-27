@@ -10,8 +10,6 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 `npm run build` bundles the app into static files for production.
 
-`npm test` starts the test runner.
-
 `npm lint` runs the linter.
 
 # SQL Schema
@@ -38,9 +36,9 @@ INSERT INTO tasks_dependencies (`dependent_task_id`, `requires_task_id`) VALUES 
 
 Base URL (SSL): ```https://api.example.com/v1/```
 
-Endpoint for checking a task: ```/tasks/check/${`id`}```
+Endpoint for checking a task: ```/tasks/check/```
 
-Endpoint un-checking a task: ```/tasks/uncheck/${`id`}```
+Endpoint un-checking a task: ```/tasks/uncheck/```
 
 
 ## Allowed HTTPs Requests for Specified Endpoints
@@ -69,7 +67,7 @@ POST
 }
 ```
 
-#### Uncheck
+### Uncheck
 
 ```
 {
@@ -83,7 +81,7 @@ POST
 
 ## Response Payload Formats
 
-- 200 (check): ```{success: true}````
+- 200 (check): ```{success: true}```
 - 200 (uncheck): ```{success: true}```
 - 400: ```{error": "BAD REQUEST"}```
 - 401: ```{error": "UNAUTHORIZED"}```
