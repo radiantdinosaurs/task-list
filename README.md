@@ -22,6 +22,8 @@ CREATE TABLE tasks (`id` INTEGER PRIMARY KEY, `group` VARCHAR(100), `task` VARCH
 CREATE TABLE tasks_dependencies (`dependent_task_id` INT NOT NULL, `requires_task_id` INT NOT NULL, PRIMARY KEY(`dependent_task_id`, `requires_task_id`));
 ```
 
+I created a table for the task dependencies, as each task might have many dependencies, so it would be best to have a relational table.
+
 ## Inserting Into Tables
 
 ```
@@ -55,19 +57,7 @@ Endpoint un-checking a task: ```/tasks/uncheck/```
 
 ## Request Payload Formats
 
-### Check
-
-```
-{
-    id: 1,
-    group: 'Purchases',
-    task: 'Go to the bank',
-    dependencyIds: [],
-    completedAt: null
-}
-```
-
-### Uncheck
+### Check/Uncheck
 
 ```
 {
