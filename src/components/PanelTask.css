@@ -1,0 +1,17 @@
+.Locked {
+    color: rgb(153, 153, 153);
+    text-align: left;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-left: none !important;
+    border-right: none !important;
+}
+
+.LockedSvg {
+    margin-left: 5px;
+    margin-right: 3px;
+}
+
+.ListItem {
+    padding: 20px 5px !important;
+}
