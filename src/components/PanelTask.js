@@ -8,15 +8,17 @@ import './PanelTask.css'
 
 class PanelTask extends Component {
     checkIfComplete(dependencyIds) {
-        let completedDependencies = 0
-        this.props.tasks.forEach(task => {
-            for (let i = 0; i < dependencyIds.length; i++) {
-                if (task.id === dependencyIds[i] && task.completedAt !== null) {
-                    completedDependencies++
+        if (dependencyIds) {
+            let completedDependencies = 0
+            this.props.tasks.forEach(task => {
+                for (let i = 0; i < dependencyIds.length; i++) {
+                    if (task.id === dependencyIds[i] && task.completedAt !== null) {
+                        completedDependencies++
+                    }
                 }
-            }
-        })
-        return completedDependencies === dependencyIds.length
+            })
+            return completedDependencies === dependencyIds.length
+        } else throw new Error('Undefined parameters.')
     }
     render() {
         const { tasks, currentGroupName } = this.props
@@ -56,6 +58,8 @@ class PanelTask extends Component {
                         <img src={ CompletedSvg } alt="completed task"/>
                         <strike><strong>{ task.task }</strong></strike>
                     </ListGroupItem>
+                } else {
+                    throw new Error('Object not as expected -- expected completedAt.')
                 }
             }))
     }

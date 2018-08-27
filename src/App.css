@@ -5,18 +5,22 @@
     text-align: left;
 }
 
+.Error {
+    width: 100%;
+}
+
 button.focus, button:focus {
-  outline: 0;
-  box-shadow: none!important;
+    outline: 0;
+    box-shadow: none!important;
 }
 
 button {
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  border-left: none !important;
-  border-right: none !important;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    border-left: none !important;
+    border-right: none !important;
 }
 
 img {
-  padding-right: 25px;
+    padding-right: 25px;
 }
