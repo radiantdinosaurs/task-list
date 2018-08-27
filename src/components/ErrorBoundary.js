@@ -18,7 +18,7 @@ class ErrorBoundary extends Component {
         if (this.state.errorInfo) {
             return (
                 <div>
-                    <Label bsStyle="danger" className="Error">
+                    <Label className="Error">
                         Sorry, we have an unexpected error!
                     </Label>
                     <details style={{ whiteSpace: 'pre-wrap' }}>
